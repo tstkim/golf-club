@@ -1,0 +1,16 @@
+# Streamlit secrets
+.streamlit/secrets.toml
+.streamlit/secrets.json
+.diva/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Mac
+.DS_Store
+
+# Local DB (if any)
+*.db
+*.sqlite3
