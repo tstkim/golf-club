@@ -249,23 +249,62 @@ with tab3:
         st.markdown("""
         ## 🏌️ 골프존 스크린 골프 룰
         
+        <style>
+            .rule-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 15px 0;
+                font-size: 0.9em;
+                font-family: sans-serif;
+                border: 1px solid #ddd;
+            }
+            .rule-table th {
+                background-color: #f2f2f2;
+                color: #333;
+                text-align: center;
+                padding: 10px;
+                border: 1px solid #ddd;
+            }
+            .rule-table td {
+                padding: 8px;
+                text-align: center;
+                border: 1px solid #ddd;
+            }
+            .rule-table tr:nth-child(even) { background-color: #f9f9f9; }
+        </style>
+
         ---
         
         ### 🎮 게임 구성
-        | 순서 | 게임 | 방식 | 비고 |
-        |------|------|------|------|
-        | 1게임 | **팀전 (방전)** | 챔피언+챌린저팀 vs 내돈내산팀 | 실력 밸런스 |
-        | 2게임 | **개인전** | 각자 경쟁 | 등급 산정 후 다음주 첫게임에 팀전 반영 |
+        <table class="rule-table">
+            <tr>
+                <th>순서</th><th>게임</th><th>방식</th><th>비고</th>
+            </tr>
+            <tr>
+                <td>1게임</td><td><b>팀전 (방전)</b></td><td>챔피언+챌린저 vs 내돈내산</td><td>실력 밸런스</td>
+            </tr>
+            <tr>
+                <td>2게임</td><td><b>개인전</b></td><td>각자 경쟁</td><td>등급 산정</td>
+            </tr>
+        </table>
         
         ---
         
         ### 💰 게임 참가비 (1게임 기준)
-        
-        | 등급 | 별칭 | 참가비 |
-        |:---:|:---:|:---:|
-        | 🥇 **A등급** | **챔피언** 🏆 | **10,000원** |
-        | 🥈 **B등급** | **내돈내산** 💵 | **14,000원** |
-        | 🥉 **C등급** | **챌린저** 🔥 | **18,000원** |
+        <table class="rule-table">
+            <tr>
+                <th>등급</th><th>별칭</th><th>참가비</th>
+            </tr>
+            <tr>
+                <td>🥇 A등급</td><td><b>챔피언</b> 🏆</td><td><b>10,000원</b></td>
+            </tr>
+            <tr>
+                <td>🥈 B등급</td><td><b>내돈내산</b> 💵</td><td><b>14,000원</b></td>
+            </tr>
+            <tr>
+                <td>🥉 C등급</td><td><b>챌린저</b> 🔥</td><td><b>18,000원</b></td>
+            </tr>
+        </table>
         
         > 💡 잘하면 싸게, 못하면 더 내는 시스템! 실력 향상 동기부여!
         
@@ -274,11 +313,20 @@ with tab3:
         ### 🏆 등급 배분 규칙
         2게임(개인전) 결과 순위에 따라 등급이 배정됩니다.
         
-        | 참가 인원 | 🥇 챔피언 | 🥈 내돈내산 | 🥉 챌린저 | 총 방 수 |
-        |:---:|:---:|:---:|:---:|:---:|
-        | **4명** | 1명 (1위) | 2명 (2~3위) | 1명 (4위) | 2방 |
-        | **6명** | 2명 (1~2위) | 2명 (3~4위) | 2명 (5~6위) | 3방 |
-        | **8명** | 3명 (1~3위) | 2명 (4~5위) | 3명 (6~8위) | 4방 |
+        <table class="rule-table">
+            <tr>
+                <th>참가 인원</th><th>🏆 챔피언</th><th>💵 내돈내산</th><th>🔥 챌린저</th><th>총 방 수</th>
+            </tr>
+            <tr>
+                <td><b>4명</b></td><td>1명 (1위)</td><td>2명 (2~3위)</td><td>1명 (4위)</td><td>2방</td>
+            </tr>
+            <tr>
+                <td><b>6명</b></td><td>2명 (1~2위)</td><td>2명 (3~4위)</td><td>2명 (5~6위)</td><td>3방</td>
+            </tr>
+            <tr>
+                <td><b>8명</b></td><td>3명 (1~3위)</td><td>2명 (4~5위)</td><td>3명 (6~8위)</td><td>4방</td>
+            </tr>
+        </table>
         
         > **📌 공식**: 내돈내산은 항상 2명 고정, 챔피언과 챌린저는 나머지 균등 배분
         
@@ -288,10 +336,17 @@ with tab3:
         
         **목표**: 실력 밸런스를 맞춰 재미있는 경기!
         
-        | 팀 구성 | 멤버 | 설명 |
-        |:---:|:---:|:---:|
-        | 🔵 **밸런스팀** | 챔피언 + 챌린저 | 상위권 + 하위권 |
-        | 🟢 **균형팀** | 내돈내산 + 내돈내산 | 중위권끼리 |= 균형 팀 |
+        <table class="rule-table">
+            <tr>
+                <th>팀 구성</th><th>멤버</th><th>설명</th>
+            </tr>
+            <tr>
+                <td style="color:blue">🔵 <b>밸런스팀</b></td><td>챔피언 + 챌린저</td><td>상위권 + 하위권</td>
+            </tr>
+            <tr>
+                <td style="color:green">🟢 <b>균형팀</b></td><td>내돈내산 + 내돈내산</td><td>중위권끼리</td>
+            </tr>
+        </table>
         
         **예시 (6명 참가 시)**:
         - 1방: 챔피언(1위) + 챌린저(5위)
@@ -305,7 +360,7 @@ with tab3:
         2. **일요일 2게임**: 개인전 진행
         3. **2게임 결과 기록**: 순위대로 등급 부여
         4. **다음 주 팀 편성**: 이번 주 등급 기준으로 자동 편성
-        """)
+        """, unsafe_allow_html=True)
     
     st.divider()
     

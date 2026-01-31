@@ -126,20 +126,95 @@ with st.expander("📖 하나로 골프클럽 멤버쉽 룰", expanded=True):
     
     ### 🎮 게임 방식
     
-    | 순서 | 게임 | 방식 | 목적 |
-    |------|------|------|------|
-    | **1게임** | 팀전 (방전) | 챔피언+챌린저 vs 내돈내산 | 실력 밸런스 대결 |
-    | **2게임** | 개인전 | 각자 경쟁 | 등급 산정 후 다음주 첫게임에 팀전 반영 |
+    <style>
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: center;
+        }
+        .styled-table th, .styled-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #dddddd;
+        }
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+        /* 등급별 색상 */
+        .grade-a { color: #d4af37; font-weight: bold; } /* Gold */
+        .grade-b { color: #888; font-weight: bold; }    /* Silver */
+        .grade-c { color: #cd7f32; font-weight: bold; } /* Bronze */
+    </style>
+
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>순서</th>
+                <th>게임</th>
+                <th>방식</th>
+                <th>목적</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>1게임</b></td>
+                <td>팀전 (방전)</td>
+                <td>챔피언+챌린저 vs 내돈내산</td>
+                <td>실력 밸런스 대결</td>
+            </tr>
+            <tr>
+                <td><b>2게임</b></td>
+                <td>개인전</td>
+                <td>각자 경쟁</td>
+                <td>등급 산정 후 다음주 반영</td>
+            </tr>
+        </tbody>
+    </table>
     
     ---
     
     ### 💰 게임 참가비 (1게임 기준)
     
-    | 등급 | 별칭 | 참가비 |
-    |:---:|:---:|:---:|
-    | 🥇 **A등급** | **챔피언** 🏆 | **10,000원** |
-    | 🥈 **B등급** | **내돈내산** 💵 | **14,000원** |
-    | 🥉 **C등급** | **챌린저** 🔥 | **18,000원** |
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>등급</th>
+                <th>별칭</th>
+                <th>참가비</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>🥇 <b>A등급</b></td>
+                <td class="grade-a">챔피언 🏆</td>
+                <td><b>10,000원</b></td>
+            </tr>
+            <tr>
+                <td>🥈 <b>B등급</b></td>
+                <td class="grade-b">내돈내산 💵</td>
+                <td><b>14,000원</b></td>
+            </tr>
+            <tr>
+                <td>🥉 <b>C등급</b></td>
+                <td class="grade-c">챌린저 🔥</td>
+                <td><b>18,000원</b></td>
+            </tr>
+        </tbody>
+    </table>
     
     > 💡 **실력 향상 동기부여!** 잘하면 싸게, 못하면 더 내는 공정한 시스템
     
@@ -149,11 +224,40 @@ with st.expander("📖 하나로 골프클럽 멤버쉽 룰", expanded=True):
     
     2게임(개인전) 결과 순위에 따라 다음 주 등급이 결정됩니다.
     
-    | 참가 인원 | 🏆 챔피언 | 💵 내돈내산 | 🔥 챌린저 | 총 방 수 |
-    |:---:|:---:|:---:|:---:|:---:|
-    | **4명** | 1명 (1위) | 2명 (2~3위) | 1명 (4위) | 2방 |
-    | **6명** | 2명 (1~2위) | 2명 (3~4위) | 2명 (5~6위) | 3방 |
-    | **8명** | 3명 (1~3위) | 2명 (4~5위) | 3명 (6~8위) | 4방 |
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>참가 인원</th>
+                <th>🏆 챔피언</th>
+                <th>💵 내돈내산</th>
+                <th>🔥 챌린저</th>
+                <th>총 방 수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>4명</b></td>
+                <td>1명 (1위)</td>
+                <td>2명 (2~3위)</td>
+                <td>1명 (4위)</td>
+                <td>2방</td>
+            </tr>
+            <tr>
+                <td><b>6명</b></td>
+                <td>2명 (1~2위)</td>
+                <td>2명 (3~4위)</td>
+                <td>2명 (5~6위)</td>
+                <td>3방</td>
+            </tr>
+            <tr>
+                <td><b>8명</b></td>
+                <td>3명 (1~3위)</td>
+                <td>2명 (4~5위)</td>
+                <td>3명 (6~8위)</td>
+                <td>4방</td>
+            </tr>
+        </tbody>
+    </table>
     
     ---
     
@@ -161,10 +265,27 @@ with st.expander("📖 하나로 골프클럽 멤버쉽 룰", expanded=True):
     
     **목표**: 실력 밸런스를 맞춰 재미있는 경기!
     
-    | 팀 구성 | 멤버 | 설명 |
-    |:---:|:---:|:---:|
-    | 🔵 **밸런스팀** | 챔피언 + 챌린저 | 상위권 + 하위권 |
-    | 🟢 **균형팀** | 내돈내산 + 내돈내산 | 중위권끼리 |
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>팀 구성</th>
+                <th>멤버</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="color:#0066cc; font-weight:bold;">🔵 밸런스팀</td>
+                <td>챔피언 + 챌린저</td>
+                <td>상위권 + 하위권</td>
+            </tr>
+            <tr>
+                <td style="color:#009933; font-weight:bold;">🟢 균형팀</td>
+                <td>내돈내산 + 내돈내산</td>
+                <td>중위권끼리</td>
+            </tr>
+        </tbody>
+    </table>
     
     **예시 (6명 참가 시)**:
     ```
@@ -187,7 +308,7 @@ with st.expander("📖 하나로 골프클럽 멤버쉽 룰", expanded=True):
     ### 🎂 생일 축하
     - 생일 달에 해당하는 멤버는 특별 축하!
     - 멤버관리에서 월별 생일자 확인 가능
-    """)
+    """, unsafe_allow_html=True)
 
 # Initialize DB if needed
 import data_manager
