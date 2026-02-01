@@ -435,19 +435,28 @@ with tab3:
             # 팀 편성 로직: A와 C를 매칭
             teams = []
             
-            # A-C 매칭
+            # A-C 매칭 (밸런스를 위해 A는 1등부터, C는 꼴찌부터 매칭)
             min_ac = min(len(a_members), len(c_members))
+            
+            # C 멤버는 뒤에서부터 매칭하기 위해 역순으로 접근하거나 인덱스 조정
+            
             for i in range(min_ac):
                 teams.append({
                     'team_num': len(teams) + 1,
-                    'members': [a_members[i], c_members[i]],
+                    # A는 i번째 (상위권), C는 뒤에서 i번째 (하위권)
+                    'members': [a_members[i], c_members[-(i+1)]],
                     'type': 'A+C'
                 })
             
-            # 남은 A 멤버
+            # 남은 A 멤버 (앞에서부터 매칭했으므로 뒤에 남은 사람들)
             remaining_a = a_members[min_ac:]
-            # 남은 C 멤버
-            remaining_c = c_members[min_ac:]
+            
+            # 남은 C 멤버 (뒤에서부터 매칭했으므로 앞에 남은 사람들)
+            # min_ac가 0이면 슬라이싱이 이상해질 수 있으므로 체크
+            if min_ac > 0:
+                remaining_c = c_members[:-min_ac]
+            else:
+                remaining_c = c_members[:]
             
             # B끼리 매칭
             b_pairs = []
