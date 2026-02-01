@@ -56,8 +56,13 @@ def assign_grades(participants, rankings):
         a_count = 1
         c_count = 1
         b_count = n - 2
+    elif n == 10:
+        # 10명: A=3, B=4, C=3
+        a_count = 3
+        b_count = 4
+        c_count = 3
     else:
-        # 5명 이상: B=2 고정, A와 C는 나머지 균등 분배
+        # 5명 이상 (10명 제외): B=2 고정, A와 C는 나머지 균등 분배
         b_count = 2
         remaining = n - b_count
         a_count = remaining // 2
@@ -355,6 +360,13 @@ with tab3:
 <td>2명 (4~5위)</td>
 <td>3명 (6~8위)</td>
 <td>4방</td>
+</tr>
+<tr>
+<td><b>10명</b></td>
+<td>3명 (1~3위)</td>
+<td>4명 (4~7위)</td>
+<td>3명 (8~10위)</td>
+<td>5방</td>
 </tr>
 </table>
 
